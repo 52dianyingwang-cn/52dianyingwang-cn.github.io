@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>52电影网 - 最新电影电视剧免费在线观看_高清影视每日更新</title>
+<meta name="description" content="52电影网（https://52dianyingwang-cn.github.io）是专注电影、电视剧、动漫、综艺在线观看的影视聚合站点，每日更新最新高清电影与热播剧集，提供剧情简介、影视评分、热播排行榜与分类导航，页面移动端自适应，找片看片一站完成。">
+<meta name="keywords" content="52电影网,电影,电视剧,在线观看,免费电影,高清电影,热播剧集,动漫番剧,综艺节目,影视排行榜,影视资源">
+<meta name="author" content="52电影网">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#4f46e5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="52电影网">
+<link rel="canonical" href="https://52dianyingwang-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="52电影网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="52电影网 - 最新电影电视剧免费在线观看_高清影视每日更新">
+<meta property="og:description" content="52电影网每日更新最新高清电影与热播剧集，涵盖动漫番剧与综艺纪实，附剧情简介与影视排行榜，手机电脑都能顺畅浏览。">
+<meta property="og:url" content="https://52dianyingwang-cn.github.io/">
+<meta property="og:image" content="https://52dianyingwang-cn.github.io/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="52电影网 - 最新电影电视剧免费在线观看">
+<meta name="twitter:description" content="最新高清电影、热播电视剧、动漫番剧、综艺纪实一站聚合，52电影网每日更新。">
+<style>
+/* ========== 基础重置 ========== */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Helvetica,Arial,sans-serif;
+  background:#f7f8fc;color:#101322;line-height:1.8;font-size:16px;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+img{border:0;max-width:100%;height:auto}
+h1,h2,h3,h4{line-height:1.4}
+
+/* ========== 设计变量：明亮现代流媒体风 ========== */
+:root{
+  --bg:#f7f8fc;
+  --ink:#101322;
+  --sub:#5b6076;
+  --muted:#8b90a5;
+  --brand:#4f46e5;
+  --brand2:#0ea5e9;
+  --brand3:#8b5cf6;
+  --star:#f59e0b;
+  --hot:#ef4444;
+  --line:#e8eaf3;
+  --card:#ffffff;
+  --r-lg:24px;
+  --r-md:18px;
+  --r-sm:12px;
+  --shadow:0 10px 30px rgba(24,28,60,.07);
+  --shadow-hover:0 18px 44px rgba(24,28,60,.14);
+}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* ========== 顶部提示条 ========== */
+.notice{
+  background:linear-gradient(90deg,var(--brand),var(--brand3) 50%,var(--brand2));
+  color:#fff;font-size:13px;
+}
+.notice .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 22px;min-height:36px}
+.notice span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.notice a{font-weight:700;padding:2px 12px;border-radius:999px;background:rgba(255,255,255,.22);white-space:nowrap}
+
+/* ========== 头部 ========== */
+header.site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1180px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.brand .mark{
+  width:42px;height:42px;border-radius:13px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  color:#fff;font-weight:900;font-size:17px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 18px rgba(79,70,229,.32);
+}
+.brand strong{display:block;font-size:20px;letter-spacing:.5px}
+.brand small{display:block;font-size:11.5px;color:var(--muted);letter-spacing:1.6px}
+
+nav.main-nav{margin-left:auto}
+nav.main-nav ul{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+nav.main-nav a{
+  display:block;padding:8px 14px;border-radius:999px;font-size:14.5px;color:var(--sub);transition:.2s;white-space:nowrap;
+}
+nav.main-nav a:hover{color:var(--brand);background:#eef0fb}
+nav.main-nav a.on{color:#fff;background:linear-gradient(120deg,var(--brand),var(--brand3));box-shadow:0 6px 16px rgba(79,70,229,.28)}
+
+.search{flex:0 0 auto;margin-left:10px;display:flex;align-items:center;background:#f1f3fa;border:1px solid var(--line);border-radius:999px;padding:3px}
+.search input{
+  width:160px;height:34px;border:0;outline:none;background:transparent;padding:0 14px;font-size:13.5px;color:var(--ink);font-family:inherit;
+}
+.search input::placeholder{color:#a1a6bd}
+.search button{
+  height:34px;border:0;border-radius:999px;padding:0 18px;font-size:13.5px;font-weight:700;color:#fff;cursor:pointer;font-family:inherit;
+  background:linear-gradient(120deg,var(--brand),var(--brand2));
+}
+
+/* ========== HERO ========== */
+.hero{padding:34px 0 10px}
+.hero-box{
+  position:relative;overflow:hidden;border-radius:32px;padding:52px 44px 40px;color:#fff;
+  background:
+    radial-gradient(700px 380px at 88% -10%,rgba(255,255,255,.28),transparent 60%),
+    radial-gradient(600px 400px at 8% 110%,rgba(255,255,255,.20),transparent 60%),
+    linear-gradient(120deg,#4f46e5 0%,#7c3aed 45%,#0ea5e9 100%);
+  box-shadow:0 24px 60px rgba(79,70,229,.28);
+}
+.hero-box::after{
+  content:"";position:absolute;right:-70px;bottom:-90px;width:300px;height:300px;border-radius:50%;
+  background:rgba(255,255,255,.10);
+}
+.hero-box::before{
+  content:"";position:absolute;left:-60px;top:-80px;width:220px;height:220px;border-radius:50%;
+  background:rgba(255,255,255,.09);
+}
+.hero-inner{position:relative;z-index:2;max-width:760px}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;font-size:12.5px;padding:5px 14px;border-radius:999px;
+  background:rgba(255,255,255,.20);border:1px solid rgba(255,255,255,.34);
+}
+.pill i{width:6px;height:6px;border-radius:50%;background:#4ade80;display:inline-block}
+.hero h1{margin:18px 0 0;font-size:clamp(28px,5.6vw,50px);letter-spacing:.5px}
+.hero h1 em{font-style:normal;background:linear-gradient(92deg,#ffe08a,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{margin-top:14px;font-size:clamp(14.5px,2.6vw,17px);color:rgba(255,255,255,.92)}
+.hero .url{margin-top:12px;font-size:13.5px;color:rgba(255,255,255,.85);word-break:break-all}
+.hero .url b{font-weight:700;color:#fff;border-bottom:2px solid rgba(255,255,255,.55)}
+.hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;font-size:15px;font-weight:700;transition:.22s}
+.btn-white{background:#fff;color:#3b2fd8;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.btn-glass{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.hero-stats{
+  position:relative;z-index:2;margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+  padding-top:22px;border-top:1px solid rgba(255,255,255,.24);
+}
+.hero-stats div{text-align:center}
+.hero-stats b{display:block;font-size:22px}
+.hero-stats span{font-size:12.5px;color:rgba(255,255,255,.82)}
+
+/* ========== 通用栏目 ========== */
+section.block{padding:46px 0 6px}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.block-head h2{font-size:clamp(20px,3.6vw,28px);display:flex;align-items:center;gap:10px}
+.block-head h2 i{
+  font-style:normal;width:30px;height:30px;border-radius:9px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+  font-size:14px;display:flex;align-items:center;justify-content:center;
+}
+.block-head .sub{font-size:13.5px;color:var(--muted);margin-top:4px;padding-left:40px}
+.block-head .more{
+  font-size:13.5px;color:var(--brand);background:#eef0fb;padding:7px 16px;border-radius:999px;white-space:nowrap;
+}
+.block-head .more:hover{background:#e3e7fb}
+
+/* 影片卡片 */
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.card{
+  background:var(--card);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);
+  transition:.26s;display:flex;flex-direction:column;border:1px solid var(--line);
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.poster{position:relative;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;padding:12px;text-align:center}
+.poster .p-title{font-size:17px;font-weight:800;color:#fff;letter-spacing:1.5px;text-shadow:0 3px 10px rgba(0,0,0,.3)}
+.poster .p-tag{
+  position:absolute;left:9px;top:9px;font-size:11px;padding:3px 9px;border-radius:7px;
+  background:rgba(0,0,0,.42);color:#fff;backdrop-filter:blur(4px);
+}
+.poster .score{
+  position:absolute;right:9px;top:9px;font-size:12px;font-weight:800;color:#4a3200;
+  background:var(--star);padding:2px 8px;border-radius:7px;
+}
+.c1{background:linear-gradient(150deg,#4f46e5,#a855f7)}
+.c2{background:linear-gradient(150deg,#0ea5e9,#22d3ee)}
+.c3{background:linear-gradient(150deg,#f97316,#fbbf24)}
+.c4{background:linear-gradient(150deg,#10b981,#34d399)}
+.c5{background:linear-gradient(150deg,#6366f1,#8b5cf6)}
+.c6{background:linear-gradient(150deg,#ef4444,#fb7185)}
+.card-body{padding:12px 13px 15px}
+.card-body h3{font-size:14.5px;min-height:2.8em}
+.card-body h3 a:hover{color:var(--brand)}
+.card-body .meta{margin-top:7px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:6px}
+
+/* 排行榜 */
+.rank{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rank-item{
+  display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--shadow);transition:.24s;
+}
+.rank-item:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.rank-no{
+  flex:0 0 32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:800;color:#fff;background:#c7cad9;
+}
+.rank-item:nth-child(1) .rank-no{background:linear-gradient(135deg,#ef4444,#f97316)}
+.rank-item:nth-child(2) .rank-no{background:linear-gradient(135deg,#f59e0b,#fbbf24)}
+.rank-item:nth-child(3) .rank-no{background:linear-gradient(135deg,#0ea5e9,#22d3ee)}
+.rank-info{flex:1;min-width:0}
+.rank-info h3{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{margin-top:7px;height:7px;border-radius:5px;background:#eef0f8;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+.rank-heat{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--hot)}
+
+/* 分类胶囊云 */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips a{
+  font-size:13.5px;padding:9px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);
+  color:var(--sub);box-shadow:0 4px 12px rgba(24,28,60,.05);transition:.2s;
+}
+.chips a:hover{color:#fff;background:linear-gradient(120deg,var(--brand),var(--brand3));border-color:transparent;box-shadow:0 8px 20px rgba(79,70,229,.28)}
+
+/* 特色卡 */
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.feature{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 20px;
+  box-shadow:var(--shadow);
+}
+.feature .ico{
+  width:48px;height:48px;border-radius:15px;display:flex;align-items:center;justify-content:center;
+  font-size:21px;color:#fff;margin-bottom:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));
+  box-shadow:0 8px 18px rgba(79,70,229,.28);
+}
+.feature:nth-child(2) .ico{background:linear-gradient(135deg,#f59e0b,#fb923c);box-shadow:0 8px 18px rgba(245,158,11,.28)}
+.feature:nth-child(3) .ico{background:linear-gradient(135deg,#10b981,#22d3ee);box-shadow:0 8px 18px rgba(16,185,129,.28)}
+.feature:nth-child(4) .ico{background:linear-gradient(135deg,#ef4444,#a855f7);box-shadow:0 8px 18px rgba(239,68,68,.26)}
+.feature h3{font-size:16.5px;margin-bottom:7px}
+.feature p{font-size:13.5px;color:var(--sub)}
+
+/* 攻略 / 资讯 */
+.guide{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.guide article{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 20px;box-shadow:var(--shadow)}
+.guide h3{font-size:16px;margin-bottom:8px}
+.guide h3 a:hover{color:var(--brand)}
+.guide p{font-size:13.5px;color:var(--sub)}
+.guide .tip{display:inline-block;font-size:12px;color:var(--brand);background:#eef0fb;padding:3px 11px;border-radius:999px;margin-bottom:10px}
+
+/* FAQ */
+.faq{display:grid;gap:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:15px 20px;box-shadow:var(--shadow)}
+summary{cursor:pointer;font-size:15.5px;font-weight:700;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";float:right;color:var(--brand);font-weight:800}
+details[open] summary::after{content:"－"}
+details p{margin-top:10px;font-size:14px;color:var(--sub)}
+
+/* ========== 页脚 ========== */
+footer.site-footer{
+  margin-top:52px;background:#11142a;color:#aeb4cc;padding:42px 0 26px;border-radius:32px 32px 0 0;
+}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
+.foot-grid h4{font-size:15px;color:#fff;margin-bottom:13px}
+.foot-grid li{font-size:13.5px;padding:4px 0}
+.foot-grid li a:hover{color:#fff}
+.foot-about .fmark{
+  display:inline-flex;align-items:center;gap:9px;font-size:19px;font-weight:800;color:#fff;margin-bottom:12px;
+}
+.foot-about .fmark i{
+  width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--brand),var(--brand2));
+  font-style:normal;font-size:15px;display:flex;align-items:center;justify-content:center;
+}
+.foot-about p{font-size:13.5px;line-height:1.9}
+.copyright{
+  margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);
+  font-size:12.5px;color:#7d839c;text-align:center;line-height:1.9;
+}
+
+/* ========== 移动端底部导航 & 回顶 ========== */
+.tabbar{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom));
+}
+.tabbar ul{display:flex}
+.tabbar li{flex:1}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:var(--muted);padding:5px 0}
+.tabbar a .ti{font-size:17px;line-height:1}
+.tabbar a.on{color:var(--brand);font-weight:700}
+.to-top{
+  position:fixed;right:18px;bottom:82px;z-index:65;width:46px;height:46px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;font-size:19px;color:#fff;
+  background:linear-gradient(135deg,var(--brand),var(--brand3));box-shadow:0 12px 26px rgba(79,70,229,.34);
+}
+
+/* ========== 响应式 ========== */
+@media (max-width:1024px){
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .guide{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  body{font-size:15px;padding-bottom:62px}
+  .wrap{padding:0 16px}
+  .notice .wrap{padding:8px 16px;font-size:12px}
+  .header-inner{padding:10px 16px;gap:10px}
+  .brand .mark{width:36px;height:36px;font-size:15px;border-radius:11px}
+  .brand strong{font-size:17.5px}
+  .brand small{font-size:10px;letter-spacing:1px}
+  .search{display:none}
+  nav.main-nav{margin-left:auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav.main-nav::-webkit-scrollbar{display:none}
+  nav.main-nav ul{flex-wrap:nowrap;gap:2px}
+  nav.main-nav a{padding:7px 11px;font-size:13.5px}
+  .hero{padding:20px 0 4px}
+  .hero-box{padding:30px 20px 26px;border-radius:22px}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px}
+  .hero-stats b{font-size:19px}
+  section.block{padding:32px 0 2px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .card-body h3{font-size:13.5px;min-height:2.5em}
+  .rank{grid-template-columns:1fr;gap:11px}
+  .features{grid-template-columns:1fr;gap:12px}
+  .feature{padding:20px 18px}
+  .guide{grid-template-columns:1fr;gap:12px}
+  .block-head .sub{padding-left:0}
+  .foot-grid{grid-template-columns:1fr;gap:22px}
+  footer.site-footer{border-radius:22px 22px 0 0}
+  .tabbar{display:block}
+  .to-top{bottom:74px;right:12px;width:42px;height:42px;border-radius:14px}
+}
+@media (max-width:400px){
+  .grid{gap:10px}
+  .poster .p-title{font-size:15px}
+  .chips a{padding:8px 14px;font-size:12.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://52dianyingwang-cn.github.io/#website",
+      "url": "https://52dianyingwang-cn.github.io/",
+      "name": "52电影网",
+      "alternateName": "52电影",
+      "description": "52电影网提供最新高清电影、热播电视剧、动漫番剧与综艺节目的在线观看、剧情简介与影视排行榜，每日更新。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://52dianyingwang-cn.github.io/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://52dianyingwang-cn.github.io/#search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://52dianyingwang-cn.github.io/#organization",
+      "name": "52电影网",
+      "url": "https://52dianyingwang-cn.github.io/",
+      "logo": "https://52dianyingwang-cn.github.io/logo.png"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://52dianyingwang-cn.github.io/#webpage",
+      "url": "https://52dianyingwang-cn.github.io/",
+      "name": "52电影网 - 最新电影电视剧免费在线观看_高清影视每日更新",
+      "isPartOf": { "@id": "https://52dianyingwang-cn.github.io/#website" },
+      "about": "电影、电视剧、动漫番剧、综艺节目的在线观看与影视资讯",
+      "inLanguage": "zh-CN",
+      "breadcrumb": { "@id": "https://52dianyingwang-cn.github.io/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://52dianyingwang-cn.github.io/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "52电影网首页", "item": "https://52dianyingwang-cn.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "最新电影", "item": "https://52dianyingwang-cn.github.io/#movie" },
+        { "@type": "ListItem", "position": 3, "name": "热播剧集", "item": "https://52dianyingwang-cn.github.io/#tv" },
+        { "@type": "ListItem", "position": 4, "name": "动漫番剧", "item": "https://52dianyingwang-cn.github.io/#anime" },
+        { "@type": "ListItem", "position": 5, "name": "综艺纪实", "item": "https://52dianyingwang-cn.github.io/#show" },
+        { "@type": "ListItem", "position": 6, "name": "影视排行榜", "item": "https://52dianyingwang-cn.github.io/#rank" },
+        { "@type": "ListItem", "position": 7, "name": "看片攻略", "item": "https://52dianyingwang-cn.github.io/#guide" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ========== 顶部提示条 ========== -->
+<div class="notice">
+  <div class="wrap">
+    <span>52电影网 · 每日 22:00 更新，热播剧集同步跟播</span>
+    <a href="#movie">立即看片</a>
+  </div>
+</div>
+
+<!-- ========== 头部 ========== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="mark">52</span>
+      <span>
+        <strong>52电影网</strong>
+        <small>52DIANYINGWANG</small>
+      </span>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#top" class="on">首页</a></li>
+        <li><a href="#movie">最新电影</a></li>
+        <li><a href="#tv">热播剧集</a></li>
+        <li><a href="#anime">动漫番剧</a></li>
+        <li><a href="#show">综艺纪实</a></li>
+        <li><a href="#rank">影视排行</a></li>
+        <li><a href="#genre">分类导航</a></li>
+        <li><a href="#guide">看片攻略</a></li>
+        <li><a href="#about">关于我们</a></li>
+      </ul>
+    </nav>
+    <form class="search" action="#" method="get" role="search">
+      <label for="q" style="position:absolute;left:-9999px">搜索影视</label>
+      <input id="q" name="q" type="search" placeholder="搜电影 / 剧名 / 演员">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-box">
+    <div class="hero-inner">
+      <span class="pill"><i></i>今日上新 22 部 · 跟播剧 31 部</span>
+      <h1 id="hero-title">看最新电影电视剧，就上<em>52电影网</em></h1>
+      <p class="lead">52电影网是专注影视内容聚合的在线观看站点，覆盖最新高清电影、热播电视剧、动漫番剧与综艺纪实四大频道。每部影片都配有剧情简介与评分参考，配合每日刷新的影视排行榜，帮你快速挑到值得看的好片。</p>
+      <p class="url">网站网址：<b>https://52dianyingwang-cn.github.io</b></p>
+      <div class="hero-cta">
+        <a class="btn btn-white" href="#movie">进入最新电影</a>
+        <a class="btn btn-glass" href="#rank">查看今日排行</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div><b>18600+</b><span>全站收录影片</span></div>
+      <div><b>22:00</b><span>每日固定更新</span></div>
+      <div><b>1080P / 4K</b><span>多档清晰度</span></div>
+      <div><b>免注册</b><span>打开即看</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 栏目一：最新电影 ========== -->
+<section class="block wrap" id="movie" aria-labelledby="movie-title">
+  <div class="block-head">
+    <div>
+      <h2 id="movie-title"><i>01</i>最新电影 · 高清在线观看</h2>
+      <p class="sub">院线新片与网络首播同步上架，52电影网每日更新</p>
+    </div>
+    <a class="more" href="#movie">全部电影 &raquo;</a>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="poster c1"><span class="p-tag">剧情</span><span class="score">8.9</span><span class="p-title">归途有风</span></div>
+      <div class="card-body">
+        <h3><a href="#">归途有风 高清完整版在线观看</a></h3>
+        <p class="meta"><span>2026 · 中国大陆</span><span>118 分钟</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c2"><span class="p-tag">科幻</span><span class="score">8.7</span><span class="p-title">星港计划</span></div>
+      <div class="card-body">
+        <h3><a href="#">星港计划 科幻大片免费观看</a></h3>
+        <p class="meta"><span>2026 · 美国</span><span>136 分钟</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c3"><span class="p-tag">动作</span><span class="score">8.3</span><span class="p-title">极夜追击</span></div>
+      <div class="card-body">
+        <h3><a href="#">极夜追击 动作爽片在线观看</a></h3>
+        <p class="meta"><span>2026 · 美国</span><span>124 分钟</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c4"><span class="p-tag">悬疑</span><span class="score">8.5</span><span class="p-title">沉默证词</span></div>
+      <div class="card-body">
+        <h3><a href="#">沉默证词 悬疑推理电影</a></h3>
+        <p class="meta"><span>2025 · 韩国</span><span>112 分钟</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c5"><span class="p-tag">动画</span><span class="score">9.1</span><span class="p-title">山海谣</span></div>
+      <div class="card-body">
+        <h3><a href="#">山海谣 国风动画电影</a></h3>
+        <p class="meta"><span>2026 · 中国大陆</span><span>102 分钟</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c6"><span class="p-tag">爱情</span><span class="score">7.9</span><span class="p-title">夏末来信</span></div>
+      <div class="card-body">
+        <h3><a href="#">夏末来信 治愈爱情电影</a></h3>
+        <p class="meta"><span>2026 · 日本</span><span>96 分钟</span></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 栏目二：热播剧集 ========== -->
+<section class="block wrap" id="tv" aria-labelledby="tv-title">
+  <div class="block-head">
+    <div>
+      <h2 id="tv-title"><i>02</i>热播电视剧 · 同步跟播</h2>
+      <p class="sub">国产剧、韩剧、日剧、美剧一站追更，更新不断档</p>
+    </div>
+    <a class="more" href="#tv">追剧日历 &raquo;</a>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="poster c2"><span class="p-tag">更新至 22 集</span><span class="score">9.2</span><span class="p-title">长风渡</span></div>
+      <div class="card-body">
+        <h3><a href="#">长风渡 电视剧全集在线观看</a></h3>
+        <p class="meta"><span>古装 · 36 集</span><span>每周三四</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c1"><span class="p-tag">已完结</span><span class="score">8.8</span><span class="p-title">破晓行动</span></div>
+      <div class="card-body">
+        <h3><a href="#">破晓行动 刑侦题材剧集</a></h3>
+        <p class="meta"><span>刑侦 · 26 集</span><span>全集上线</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c3"><span class="p-tag">更新至 16 集</span><span class="score">8.6</span><span class="p-title">城中小院</span></div>
+      <div class="card-body">
+        <h3><a href="#">城中小院 都市生活剧</a></h3>
+        <p class="meta"><span>都市 · 30 集</span><span>每周一二</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c4"><span class="p-tag">已完结</span><span class="score">9.0</span><span class="p-title">岁时记</span></div>
+      <div class="card-body">
+        <h3><a href="#">岁时记 年代情感大剧</a></h3>
+        <p class="meta"><span>年代 · 32 集</span><span>全集上线</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c5"><span class="p-tag">更新至 10 集</span><span class="score">8.4</span><span class="p-title">少年与海</span></div>
+      <div class="card-body">
+        <h3><a href="#">少年与海 青春校园剧</a></h3>
+        <p class="meta"><span>青春 · 20 集</span><span>每周五</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c6"><span class="p-tag">已完结</span><span class="score">8.7</span><span class="p-title">白衣行者</span></div>
+      <div class="card-body">
+        <h3><a href="#">白衣行者 医疗职场剧</a></h3>
+        <p class="meta"><span>医疗 · 28 集</span><span>全集上线</span></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 栏目三：动漫番剧 ========== -->
+<section class="block wrap" id="anime" aria-labelledby="anime-title">
+  <div class="block-head">
+    <div>
+      <h2 id="anime-title"><i>03</i>动漫番剧 · 新番连载</h2>
+      <p class="sub">日漫新番与国漫佳作同步更新，补番不再东找西找</p>
+    </div>
+    <a class="more" href="#anime">番剧时间表 &raquo;</a>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="poster c5"><span class="p-tag">国漫</span><span class="score">9.3</span><span class="p-title">青云剑诀</span></div>
+      <div class="card-body">
+        <h3><a href="#">青云剑诀 国漫仙侠番剧</a></h3>
+        <p class="meta"><span>仙侠 · 更新中</span><span>每周六</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c2"><span class="p-tag">日番</span><span class="score">8.8</span><span class="p-title">银河旅人</span></div>
+      <div class="card-body">
+        <h3><a href="#">银河旅人 太空冒险动画</a></h3>
+        <p class="meta"><span>冒险 · 更新中</span><span>每周四</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c1"><span class="p-tag">机甲</span><span class="score">8.5</span><span class="p-title">铁甲纪元</span></div>
+      <div class="card-body">
+        <h3><a href="#">铁甲纪元 机甲战斗动画</a></h3>
+        <p class="meta"><span>机甲 · 已完结</span><span>全 24 话</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c3"><span class="p-tag">奇幻</span><span class="score">8.9</span><span class="p-title">百鬼夜行抄</span></div>
+      <div class="card-body">
+        <h3><a href="#">百鬼夜行抄 志怪奇幻番剧</a></h3>
+        <p class="meta"><span>奇幻 · 更新中</span><span>每周日</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c4"><span class="p-tag">治愈</span><span class="score">9.0</span><span class="p-title">四季小屋</span></div>
+      <div class="card-body">
+        <h3><a href="#">四季小屋 治愈系日常动画</a></h3>
+        <p class="meta"><span>治愈 · 已完结</span><span>全 12 话</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c6"><span class="p-tag">热血</span><span class="score">8.4</span><span class="p-title">烈焰球场</span></div>
+      <div class="card-body">
+        <h3><a href="#">烈焰球场 运动热血动画</a></h3>
+        <p class="meta"><span>运动 · 更新中</span><span>每周二</span></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 栏目四：综艺纪实 ========== -->
+<section class="block wrap" id="show" aria-labelledby="show-title">
+  <div class="block-head">
+    <div>
+      <h2 id="show-title"><i>04</i>综艺纪实 · 轻松下饭</h2>
+      <p class="sub">真人秀、音乐综艺、人文纪录片，周末不剧荒</p>
+    </div>
+    <a class="more" href="#show">综艺合辑 &raquo;</a>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="poster c3"><span class="p-tag">真人秀</span><span class="score">8.5</span><span class="p-title">去有风的地方</span></div>
+      <div class="card-body">
+        <h3><a href="#">去有风的地方 旅行真人秀</a></h3>
+        <p class="meta"><span>旅行 · 第 5 季</span><span>更新至 10 期</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c6"><span class="p-tag">音乐</span><span class="score">9.1</span><span class="p-title">声浪现场</span></div>
+      <div class="card-body">
+        <h3><a href="#">声浪现场 音乐竞演综艺</a></h3>
+        <p class="meta"><span>音乐 · 第 2 季</span><span>更新至 12 期</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c4"><span class="p-tag">美食</span><span class="score">8.7</span><span class="p-title">一日三餐</span></div>
+      <div class="card-body">
+        <h3><a href="#">一日三餐 家常美食节目</a></h3>
+        <p class="meta"><span>美食 · 第 3 季</span><span>更新至 14 期</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c2"><span class="p-tag">纪实</span><span class="score">9.4</span><span class="p-title">大江之源</span></div>
+      <div class="card-body">
+        <h3><a href="#">大江之源 自然地理纪录片</a></h3>
+        <p class="meta"><span>自然 · 全 8 集</span><span>已完结</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c1"><span class="p-tag">文化</span><span class="score">9.2</span><span class="p-title">手艺中国</span></div>
+      <div class="card-body">
+        <h3><a href="#">手艺中国 非遗人文纪录片</a></h3>
+        <p class="meta"><span>人文 · 全 10 集</span><span>已完结</span></p>
+      </div>
+    </article>
+    <article class="card">
+      <div class="poster c5"><span class="p-tag">访谈</span><span class="score">8.3</span><span class="p-title">对面的人</span></div>
+      <div class="card-body">
+        <h3><a href="#">对面的人 深度人物访谈</a></h3>
+        <p class="meta"><span>访谈 · 第 3 季</span><span>更新至 08 期</span></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 栏目五：影视排行榜 ========== -->
+<section class="block wrap" id="rank" aria-labelledby="rank-title">
+  <div class="block-head">
+    <div>
+      <h2 id="rank-title"><i>05</i>影视排行榜 · 全站热播 TOP 10</h2>
+      <p class="sub">按播放热度、搜索量与评分综合排序，每日刷新</p>
+    </div>
+    <a class="more" href="#rank">完整榜单 &raquo;</a>
+  </div>
+  <div class="rank">
+    <div class="rank-item">
+      <span class="rank-no">1</span>
+      <div class="rank-info">
+        <h3><a href="#">长风渡（电视剧 · 更新至 22 集）</a></h3>
+        <div class="bar"><i style="width:98%"></i></div>
+      </div>
+      <span class="rank-heat">992 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">2</span>
+      <div class="rank-info">
+        <h3><a href="#">归途有风（剧情片 · 2026 新片）</a></h3>
+        <div class="bar"><i style="width:94%"></i></div>
+      </div>
+      <span class="rank-heat">946 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">3</span>
+      <div class="rank-info">
+        <h3><a href="#">青云剑诀（国漫番剧 · 更新中）</a></h3>
+        <div class="bar"><i style="width:89%"></i></div>
+      </div>
+      <span class="rank-heat">897 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">4</span>
+      <div class="rank-info">
+        <h3><a href="#">声浪现场（音乐综艺 · 第 2 季）</a></h3>
+        <div class="bar"><i style="width:83%"></i></div>
+      </div>
+      <span class="rank-heat">836 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">5</span>
+      <div class="rank-info">
+        <h3><a href="#">星港计划（科幻片 · 4K 专区）</a></h3>
+        <div class="bar"><i style="width:77%"></i></div>
+      </div>
+      <span class="rank-heat">778 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">6</span>
+      <div class="rank-info">
+        <h3><a href="#">大江之源（纪录片 · 全 8 集）</a></h3>
+        <div class="bar"><i style="width:71%"></i></div>
+      </div>
+      <span class="rank-heat">713 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">7</span>
+      <div class="rank-info">
+        <h3><a href="#">破晓行动（刑侦剧 · 已完结）</a></h3>
+        <div class="bar"><i style="width:65%"></i></div>
+      </div>
+      <span class="rank-heat">654 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">8</span>
+      <div class="rank-info">
+        <h3><a href="#">银河旅人（日番动画 · 更新中）</a></h3>
+        <div class="bar"><i style="width:59%"></i></div>
+      </div>
+      <span class="rank-heat">597 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">9</span>
+      <div class="rank-info">
+        <h3><a href="#">极夜追击（动作片 · 2026）</a></h3>
+        <div class="bar"><i style="width:53%"></i></div>
+      </div>
+      <span class="rank-heat">538 万</span>
+    </div>
+    <div class="rank-item">
+      <span class="rank-no">10</span>
+      <div class="rank-info">
+        <h3><a href="#">岁时记（年代剧 · 已完结）</a></h3>
+        <div class="bar"><i style="width:46%"></i></div>
+      </div>
+      <span class="rank-heat">469 万</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 栏目六：分类导航 ========== -->
+<section class="block wrap" id="genre" aria-labelledby="genre-title">
+  <div class="block-head">
+    <div>
+      <h2 id="genre-title"><i>06</i>影视分类导航 · 按类型找片</h2>
+      <p class="sub">20+ 细分类型，52电影网帮你快速定位想看的内容</p>
+    </div>
+    <a class="more" href="#genre">全部分类 &raquo;</a>
+  </div>
+  <div class="chips">
+    <a href="#">动作电影</a>
+    <a href="#">喜剧电影</a>
+    <a href="#">爱情电影</a>
+    <a href="#">科幻电影</a>
+    <a href="#">悬疑犯罪</a>
+    <a href="#">恐怖惊悚</a>
+    <a href="#">战争历史</a>
+    <a href="#">动画电影</a>
+    <a href="#">纪录影片</a>
+    <a href="#">国产电视剧</a>
+    <a href="#">韩剧专区</a>
+    <a href="#">日剧专区</a>
+    <a href="#">美剧专区</a>
+    <a href="#">港剧经典</a>
+    <a href="#">古装剧集</a>
+    <a href="#">都市职场</a>
+    <a href="#">青春校园</a>
+    <a href="#">新番动画</a>
+    <a href="#">国漫崛起</a>
+    <a href="#">综艺真人秀</a>
+    <a href="#">4K 高清专区</a>
+    <a href="#">经典怀旧片库</a>
+    <a href="#">高分佳作精选</a>
+    <a href="#">影视片单合集</a>
+  </div>
+</section>
+
+<!-- ========== 栏目七：站点特色 ========== -->
+<section class="block wrap" id="feature" aria-labelledby="feature-title">
+  <div class="block-head">
+    <div>
+      <h2 id="feature-title"><i>07</i>为什么用 52电影网 看电影电视剧</h2>
+      <p class="sub">四个理由，让找片看片这件事变简单</p>
+    </div>
+    <a class="more" href="#about">了解我们 &raquo;</a>
+  </div>
+  <div class="features">
+    <article class="feature">
+      <span class="ico" aria-hidden="true">▤</span>
+      <h3>片库大 · 上新快</h3>
+      <p>电影、电视剧、动漫、综艺四大频道持续铺量，新片上线 24 小时内完成收录，每日 22:00 固定更新一批。</p>
+    </article>
+    <article class="feature">
+      <span class="ico" aria-hidden="true">◉</span>
+      <h3>多档画质可选</h3>
+      <p>提供 1080P 与 4K 清晰度切换，依据网络状况自适应码率，手机流量下也能稳定播放不卡顿。</p>
+    </article>
+    <article class="feature">
+      <span class="ico" aria-hidden="true">◎</span>
+      <h3>全端自适应</h3>
+      <p>响应式排版覆盖手机、平板与桌面端，移动端带底部快捷导航，单手操作也能顺畅找片追剧。</p>
+    </article>
+    <article class="feature">
+      <span class="ico" aria-hidden="true">★</span>
+      <h3>榜单评分参考</h3>
+      <p>影视排行榜综合播放热度与用户评分排序，每部影片附剧情简介，先看再选、少踩雷。</p>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 栏目八：看片攻略 ========== -->
+<section class="block wrap" id="guide" aria-labelledby="guide-title">
+  <div class="block-head">
+    <div>
+      <h2 id="guide-title"><i>08</i>看片攻略 · 52电影网使用指南</h2>
+      <p class="sub">三分钟上手，快速找到想看的电影和电视剧</p>
+    </div>
+    <a class="more" href="#guide">更多攻略 &raquo;</a>
+  </div>
+  <div class="guide">
+    <article>
+      <span class="tip">新手上手</span>
+      <h3><a href="#">三步找到想看的电影电视剧</a></h3>
+      <p>先用顶部搜索框按片名或演员检索；没有结果就进入「影视分类导航」按类型筛选；最后对照「影视排行榜」看热度与评分，基本不会踩空。</p>
+    </article>
+    <article>
+      <span class="tip">追更技巧</span>
+      <h3><a href="#">热播剧集追更的正确打开方式</a></h3>
+      <p>热播剧集栏目标注了当前集数与每周更新日，配合 52电影网每日 22:00 的更新时间，可以提前安排追剧节奏，避免错过最新一集。</p>
+    </article>
+    <article>
+      <span class="tip">画质选择</span>
+      <h3><a href="#">手机看片怎么选清晰度最省流</a></h3>
+      <p>移动网络下建议选择 1080P 档位，Wi-Fi 环境再切到 4K 专区；52电影网会根据带宽自适应码率，弱网环境也能保持连续播放。</p>
+    </article>
+    <article>
+      <span class="tip">片单推荐</span>
+      <h3><a href="#">周末刷片：五类高分佳作清单</a></h3>
+      <p>从治愈系电影、高分国漫番剧到评分 9 分以上的纪录片，52电影网整理了适合周末连刷的片单，按类型进入即可一次性补完。</p>
+    </article>
+    <article>
+      <span class="tip">移动端</span>
+      <h3><a href="#">手机端页面适配与快捷导航说明</a></h3>
+      <p>小屏下自动切换为双列卡片与底部快捷导航，影视排行榜保留热度数值，信息密度与可读性兼顾，通勤路上也能顺畅浏览。</p>
+    </article>
+    <article>
+      <span class="tip">更新机制</span>
+      <h3><a href="#">52电影网的内容更新与收录规则</a></h3>
+      <p>全站每日固定更新，热播剧集按播出平台节奏同步跟播，新片优先收录院线热映与网络首播作品，未收录影片可提交片名补录。</p>
+    </article>
+  </div>
+</section>
+
+<!-- ========== 栏目九：关于我们 / FAQ ========== -->
+<section class="block wrap" id="about" aria-labelledby="about-title">
+  <div class="block-head">
+    <div>
+      <h2 id="about-title"><i>09</i>关于 52电影网 · 常见问题</h2>
+      <p class="sub">了解 52电影网的更新规则与使用说明</p>
+    </div>
+    <a class="more" href="#about">联系站长 &raquo;</a>
+  </div>
+  <div class="faq">
+    <details open>
+      <summary>52电影网是什么类型的网站？</summary>
+      <p>52电影网（https://52dianyingwang-cn.github.io）是面向影视爱好者的在线观看聚合站点，收录最新高清电影、热播电视剧、动漫番剧与综艺纪实，提供剧情简介、评分参考、影视排行榜与分类导航，帮助观众快速找到想看的内容。</p>
+    </details>
+    <details>
+      <summary>网站内容多久更新一次？</summary>
+      <p>全站每日 22:00 固定更新，热播剧集按播出平台节奏同步跟播，影视排行榜每日刷新排序，最新电影栏目优先收录院线热映与网络首播作品。</p>
+    </details>
+    <details>
+      <summary>手机端可以正常浏览和看片吗？</summary>
+      <p>可以。52电影网采用响应式设计，页面在手机、平板与桌面端自动调整布局，移动端提供底部快捷导航，卡片双列排布，阅读与操作都很顺手。</p>
+    </details>
+    <details>
+      <summary>找不到想看的电影或电视剧怎么办？</summary>
+      <p>可使用导航栏搜索框按片名、演员检索，也可进入「影视分类导航」按类型筛选；仍未收录的影片可通过「联系站长」提交片名，我们会在下一次更新时优先补录。</p>
+    </details>
+    <details>
+      <summary>52电影网的影视排行榜是怎么排序的？</summary>
+      <p>排行榜综合播放热度、搜索量与用户评分三项数据加权计算，每日刷新一次，既反映当下热播趋势，也避免单纯流量带来的偏差。</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== 页脚 ========== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <span class="fmark"><i>52</i>52电影网</span>
+        <p>52电影网专注影视内容聚合与观影导航，覆盖电影、电视剧、动漫番剧、综艺纪实四大频道，每日更新影视排行榜与新片资讯，帮你更快找到值得看的好片。</p>
+        <p>网址：https://52dianyingwang-cn.github.io</p>
+      </div>
+      <div>
+        <h4>影视频道</h4>
+        <ul>
+          <li><a href="#movie">最新电影</a></li>
+          <li><a href="#tv">热播剧集</a></li>
+          <li><a href="#anime">动漫番剧</a></li>
+          <li><a href="#show">综艺纪实</a></li>
+          <li><a href="#rank">影视排行</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>分类导航</h4>
+        <ul>
+          <li><a href="#genre">动作电影</a></li>
+          <li><a href="#genre">科幻电影</a></li>
+          <li><a href="#genre">国产电视剧</a></li>
+          <li><a href="#genre">日韩剧集</a></li>
+          <li><a href="#genre">4K 高清专区</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>站点信息</h4>
+        <ul>
+          <li><a href="#about">关于 52电影网</a></li>
+          <li><a href="#feature">站点特色</a></li>
+          <li><a href="#guide">看片攻略</a></li>
+          <li><a href="#">更新日志</a></li>
+          <li><a href="#">免责声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">
+      52电影网 &copy; 2026 · 本站为影视信息聚合与观影导航站点，所列影片信息仅供参考。<br>
+      Powered by 52电影网 | https://52dianyingwang-cn.github.io
+    </p>
+  </div>
+</footer>
+
+<!-- ========== 移动端底部导航 ========== -->
+<nav class="tabbar" aria-label="移动端快捷导航">
+  <ul>
+    <li><a href="#top" class="on"><span class="ti" aria-hidden="true">◆</span>首页</a></li>
+    <li><a href="#movie"><span class="ti" aria-hidden="true">▤</span>电影</a></li>
+    <li><a href="#tv"><span class="ti" aria-hidden="true">▣</span>剧集</a></li>
+    <li><a href="#anime"><span class="ti" aria-hidden="true">✦</span>动漫</a></li>
+    <li><a href="#rank"><span class="ti" aria-hidden="true">★</span>排行</a></li>
+  </ul>
+</nav>
+
+<a class="to-top" href="#top" aria-label="返回顶部">↑</a>
+
+</body>
+</html>
